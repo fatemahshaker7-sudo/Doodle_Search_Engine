@@ -51,9 +51,9 @@ Figure: `preprocess_check.png` (Paint drawing, phone photo). Notes:
 
 | # | Input | What came back | Cause (preprocessing gap / lookalike shapes / threshold too high or low / model limits) |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | fish | car | lookalike shapes |
+| 2 | dog | fish | model limits |
+| 3 | sun | apple | because they are both circles (lookalike shapes) | 
 
 ## Other notes
 
