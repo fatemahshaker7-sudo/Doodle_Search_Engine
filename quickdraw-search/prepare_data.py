@@ -6,8 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # the chosen categories
-INDEX_CATEGORIES = ["cat", "dog", "sun", "smiley face", "cup", "bucket",
-                    "apple", "house", "car", "fish"]
+INDEX_CATEGORIES = ["cat", "dog", "sun", "smiley face", "cup", "bucket","apple", "house", "car", "fish"]
 HELD_OUT_CATEGORIES = ["cell phone"]   # never indexed: tests the threshold
 
 # 450 gallery + 50 query doodles per index category, 50 per held-out category, the 50 queries are used to calculate (p@5, p@25)
@@ -64,4 +63,3 @@ for ax, n in zip(axes.ravel(), np.random.choice(len(gallery), 25, replace=False)
     ax.imshow(gallery[n], cmap="gray")
     ax.axis("off")
 plt.savefig("grid_check.png")
-print("saved data/subset.npz and grid_check.png")
