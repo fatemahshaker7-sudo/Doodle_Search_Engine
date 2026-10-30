@@ -1,4 +1,4 @@
-# 🎨 DoodleDex – AI-Powered Doodle Search Engine
+# 🎨 DoodleSearch – AI-Powered Doodle Search Engine
 
 **Live Demo:** [DoodleSearch – Streamlit App](https://doodlesearch.streamlit.app/)  
 
