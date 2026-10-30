@@ -12,7 +12,7 @@ INDEX_DIR = BASE_DIR / "index"
 REQUIRED_FILES = ["embeddings.npy", "gallery_images.npy", "config.json"]
 
 # starting the page
-st.set_page_config(page_title="DoodleDex", layout="wide")
+st.set_page_config(page_title="DoodleSearch", layout="wide")
 
 # caching
 @st.cache_resource
