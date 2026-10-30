@@ -27,4 +27,3 @@ for (raw_ax, processed_ax, gallery_ax), path in zip(rows, paths):
 
 plt.tight_layout()
 plt.savefig("preprocess_check.png", dpi=120)
-print("saved preprocess_check.png")
