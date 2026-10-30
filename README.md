@@ -284,4 +284,3 @@ Suggested screenshots to include:
 - **Pretrained Model:** [MobileNetV2 – Keras Applications](https://keras.io/api/applications/mobilenet/#mobilenetv2-function) – Used as a feature extractor to generate image embeddings.
 - **Drawing Interface:** [Streamlit Drawable Canvas](https://github.com/andfanilo/streamlit-drawable-canvas) – Interactive doodle drawing functionality.
 - **Web Application:** [Streamlit Documentation](https://docs.streamlit.io/) – Application development and deployment.
-- **Project Reference:** Quick, Draw! Doodle Search Engine activity.
