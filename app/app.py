@@ -1,4 +1,4 @@
-"""DoodleDex Streamlit app. Shows similar doodles, never shows labels."""
+"""DoodleSearch Streamlit app. Shows similar doodles, never shows labels."""
 import json
 from pathlib import Path
 import numpy as np
@@ -41,14 +41,17 @@ def show(raw_image):
     if query_28 is None:
         st.info("Draw something first.")
         return
+
     left, right = st.columns(2)
     left.image(raw_image, caption="Your input", width=200)
     right.image(query_28, caption="What the model sees", width=200, clamp=True)
     k = min(config.get("top_k", 25), 25, len(embeddings))
     indices, scores = search(embed(model, query_28[None])[0], embeddings, k)
+
     if scores[0] < config["threshold"]:
         st.warning("Nothing similar found")
         return
+
     st.subheader("Doodles that look like yours")
     for start in range(0, len(indices), 5):
         for column, n in zip(st.columns(5), range(start, min(start + 5, len(indices)))):
@@ -56,6 +59,7 @@ def show(raw_image):
 
 st.title("DoodleDex: who drew it like you?")
 draw_tab, upload_tab = st.tabs(["Draw", "Upload"])
+
 with draw_tab:
     try:
         from streamlit_drawable_canvas import st_canvas
