@@ -6,15 +6,11 @@ import streamlit as st
 from PIL import Image
 from search_core import load_model, embed, search, preprocess_query
 
-# importing nessesary files
-BASE_DIR = Path(__file__).resolve().parent.parent
-INDEX_DIR = BASE_DIR / "index"
+INDEX_DIR = Path(__file__).parent / "index"   # works from any launch folder
 REQUIRED_FILES = ["embeddings.npy", "gallery_images.npy", "config.json"]
 
-# starting the page
-st.set_page_config(page_title="DoodleSearch", layout="wide")
+st.set_page_config(page_title="DoodleDex", layout="wide")
 
-# caching
 @st.cache_resource
 def get_model():
     return load_model()
